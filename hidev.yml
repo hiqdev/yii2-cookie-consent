@@ -1,0 +1,19 @@
+package:
+    type:           yii2-extension
+    name:           yii2-cookie-consent
+    title:          Yii2 Cookie Consent
+    keywords:       yii2, cookie, consent, plugin
+    description:    |
+        Provides really easy alerting users about the use of
+        cookies on your site.
+
+        Cookie consent is required to comply with the [EU Cookie Law].
+
+        Additionally it detects if cookie is disabled in user's browser
+        and redirects user to predefined page.
+
+        Works by adding Behavior to the Application View.
+        Behavior listens to [EVENT_END_BODY] and echos the consent script.
+
+        [EVENT_END_BODY]:   http://www.yiiframework.com/doc-2.0/yii-web-view.html#EVENT_END_BODY-detail
+        [EU Cookie Law]:    http://ec.europa.eu/ipg/basics/legal/cookies/index_en.htm
