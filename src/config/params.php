@@ -9,11 +9,13 @@
  */
 
 return [
-    'cookieConsent.disabled'        => null,
-    'cookieConsent.params.message'  => 'This website uses cookies to ensure you get the best experience on our website.',
-    'cookieConsent.params.dismiss'  => 'Got it',
-    'cookieConsent.params.theme'    => 'dark-bottom',
-    'cookieConsent.params.more'     => 'Learn more',
-    'cookieConsent.params.moreLink' => '/privacy-policy',
-    'cookieConsent.params.failUrl'  => '/no-cookies',
+    'cookieConsent.disabled'    => null,
+    'cookieConsent.params'      => [
+        'message'  => 'This website uses cookies to ensure you get the best experience on our website.',
+        'dismiss'  => 'Got it',
+        'theme'    => 'dark-bottom',
+        'more'     => 'Learn more',
+        'moreLink' => '/privacy-policy',
+        'failUrl'  => null,
+    ],
 ];
