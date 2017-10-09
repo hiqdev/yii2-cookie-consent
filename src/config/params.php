@@ -13,9 +13,9 @@ return [
     'cookieConsent.params'      => [
         'message'  => 'This website uses cookies to ensure you get the best experience on our website.',
         'dismiss'  => 'Got it',
-        'theme'    => 'dark-bottom',
+        'theme'    => 'dark-top',
         'more'     => 'Learn more',
-        'moreLink' => '/privacy-policy',
+        'moreLink' => '/pages/rules/index#privacyPolicy',
         'failUrl'  => null,
     ],
 ];
