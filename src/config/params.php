@@ -11,11 +11,11 @@
 return [
     'cookieConsent.disabled'    => null,
     'cookieConsent.params'      => [
-        'message'  => 'This website uses cookies to ensure you get the best experience on our website.',
-        'dismiss'  => 'Got it',
-        'theme'    => 'dark-top',
-        'more'     => 'Learn more',
-        'moreLink' => '/pages/rules/index#privacyPolicy',
-        'failUrl'  => null,
+        'message'           => 'This website uses cookies to ensure you get the best experience on our website.',
+        'dismiss'           => 'Got it',
+        'theme'             => 'dark-top',
+        'more'              => 'Learn more',
+        'moreLink'          => '/pages/rules/index#privacyPolicy',
+        'missingCookieUrl'  => null,
     ],
 ];
