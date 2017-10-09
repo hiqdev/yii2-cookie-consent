@@ -43,6 +43,10 @@
             "homepage": "http://hiqdev.com/"
         }
     ],
+    "require": {
+        "yiisoft/yii2": "^2.0",
+        "bower-asset/cookieconsent2": "2.0.*"
+    },
     "require-dev": {
         "hiqdev/hidev-php": "<2.0 || dev-master",
         "hiqdev/hidev-hiqdev": "<2.0 || dev-master"
