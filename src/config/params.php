@@ -16,6 +16,6 @@ return [
         'theme' => 'dark-top',
         'more' => 'Learn more',
         'moreLink' => '/pages/rules/index#privacyPolicy',
-        'missingCookieUrl' => 'default',
+        'missingCookieUrl' => null,
     ],
 ];
