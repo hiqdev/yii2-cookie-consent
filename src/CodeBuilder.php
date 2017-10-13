@@ -3,6 +3,7 @@
 namespace hiqdev\yii2\CookieConsent;
 
 use Yii;
+use yii\helpers\Url;
 
 class CodeBuilder
 {
@@ -17,7 +18,11 @@ class CodeBuilder
 
     public function render()
     {
-        return $this->getView()->render('@hiqdev/yii2/CookieConsent/views/code.php', $this->prepareData());
+        $request = Yii::$app->request;
+        $data = $this->prepareData();
+        if ($data['params']['missingCookieUrl'] !== $request->getUrl()) {
+            return $this->getView()->render('@hiqdev/yii2/CookieConsent/views/code.php', $data);
+        }
     }
 
     public function prepareData()
@@ -35,8 +40,12 @@ class CodeBuilder
 
     public function prepareParams()
     {
-        return array_filter(array_merge($this->params, [
+        $params = [
             'id' => $this->id,
-        ]));
+        ];
+        if ($this->params['missingCookieUrl'] === 'default') {
+            $params['missingCookieUrl'] = Url::toRoute(['@cookieConsent/default']);
+        }
+        return array_filter(array_merge($this->params, $params));
     }
 }

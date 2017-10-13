@@ -10,7 +10,7 @@ class DefaultPage extends AssetBundle
     /**
      * @inherit
      */
-    public $sourcePath = '@hidev/yii2/CookieConsent/assets/';
+    public $sourcePath = '@hiqdev/yii2/CookieConsent/assets/';
 
     /**
      * @inherit

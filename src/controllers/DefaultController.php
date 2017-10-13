@@ -6,8 +6,10 @@ use yii\web\Controller;
 
 class DefaultController extends Controller
 {
+    public $layout = '@hiqdev/yii2/CookieConsent/views/layouts/main';
+
     public function actionDefault()
     {
-        return 'Test CookieConsent default page!';
+        return $this->render('default');
     }
 }
