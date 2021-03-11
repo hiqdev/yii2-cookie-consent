@@ -20,7 +20,7 @@ class CodeBuilder
     {
         $request = Yii::$app->request;
         $data = $this->prepareData();
-        if ($data['params']['missingCookieUrl'] !== $request->getUrl()) {
+        if (($data['params']['missingCookieUrl'] ?? null) !== $request->getUrl()) {
             return $this->getView()->render('@hiqdev/yii2/CookieConsent/views/code.php', $data);
         }
     }
@@ -43,7 +43,7 @@ class CodeBuilder
         $params = [
             'id' => $this->id,
         ];
-        if ($this->params['missingCookieUrl'] === 'default') {
+        if (($this->params['missingCookieUrl'] ?? null) === 'default') {
             $params['missingCookieUrl'] = Url::toRoute(['@cookieConsent/default']);
         }
         return array_filter(array_merge($this->params, $params));
