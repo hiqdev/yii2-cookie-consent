@@ -30,7 +30,7 @@ class CodeBuilder
         return [
             'id' => $this->id,
             'params' => array_merge($this->prepareParams(), [
-                'domain' => Yii::$app->request->hostInfo,
+                'domain' => Yii::$app->request->hostName,
                 'container' => null,
                 'path' => '/',
                 'expiryDays' => 365,
